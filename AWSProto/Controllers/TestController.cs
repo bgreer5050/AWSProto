@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AWSProto.Controllers
 {
+    [Route("api/[controller]")]
     public class TestController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             ContentResult result = new ContentResult { Content = "Test", ContentType = "json", StatusCode = 200 };
